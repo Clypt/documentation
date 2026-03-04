@@ -1,0 +1,88 @@
+---
+title: "Binance"
+---
+
+<Warning>
+  When configuring API permissions, NEVER enable "Withdraw Funds". ClyptAI only requires read access and trade execution permissions.
+</Warning>
+
+<Steps>
+  <Step title="Step 1: Navigate to Binance API Management">
+    Log in to your Binance account. Click on yyour **Profile Icon** in the top right corner to access your main Dashboard.
+
+    1. On the left sidebar menu, find the **Account** section, scroll down, and click on **API Management**.
+    2. Click the yellow **Create API** button located at the top right.
+    3. A **Choose API Key type** pop-up will appear. Select the first option: **System generated**, and click the yellow **Next** button.
+    4. Give your API Key a label (e.g., 'ClyptAI Trading') and complete the security verification (Passkey/Authenticator App) to proceed.
+
+    On the left Sidebar menu, scroll down and click on **API.**
+  </Step>
+  <Step title="Step 2: Edit Restrictions">
+    Binance requires you to bind trusted IP addresses _before_ you can enable trading permissions.
+
+    1. On your newly created API key block, click the yellow **Edit restrictions** button in the top right corner.
+    2. Scroll down to the **IP access restriction** section at the bottom.
+    3. Select the option: **Restrict access to trusted IPs only (Recommended)**. An input box will appear.
+
+    <Frame>
+      ![Screenshot 2026 03 04 At 5 13 52 PM](/images/Screenshot2026-03-04at5.13.52PM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 3: Copy IP Whitelist from ClyptAI">
+    _(Please keep your Binance tab open!)_
+
+    1. Open a new browser tab and log in to your **ClyptAI** dashboard.
+    2. Navigate to the exchage connection page and select **Binance** from the dropdown menu.
+    3. Locate the **IP Whitelist** box and click the **Copy** button.
+
+    <Frame>
+      ![Screenshot 2026 03 04 At 5 16 17 PM](/images/Screenshot2026-03-04at5.16.17PM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 4: Paste IP & Configure Permissions">
+    Now that you have the IPs, let's finish the configuration:
+
+    1. Go back to your **Binance** tab.
+    2. **Paste** the copied IP Whitelist into the IP restiction box.
+    3. Click the **Confirm** text next to the input box. (The IP addresses will now be listed in yellow blocks).
+    4. Now, scroll up slightly to the **API restrictions** section. The checkboxes are now clickable. Check the following:
+
+    - **Enable Reading**
+    - **Enable Spot & Margin Trading**
+    - **Enable Futures**
+
+    <Frame>
+      ![Screenshot 2026 03 04 At 5 22 14 PM](/images/Screenshot2026-03-04at5.22.14PM.png)
+    </Frame>
+    <Warning>
+      **Security Note:** Absolutely do NOT check **Enable Withdrawals.**
+    </Warning>
+  </Step>
+  <Step title="Step 5: Save your API Key">
+    Click the yellow **Save** button at the top right of the API block. _(You may need to enter your 2FA code again to save these changes)._
+
+    1. Go back to your open **ClyptAI** tab.
+    2. Click the yellow `Copy` text next to the **API Key** on Binance and paste it into the **API Key** field in ClyptAI.
+    3. Copy the **Secret Key** from Binance and paste it into the **API Secret** field in ClyptAI.
+    4. Click the **Connect** button to finish!
+
+    <Warning>
+      **CRITICAL:** Binance will only show your **Secret Key** ONCE. If you navigate away or refresh the page, the Secret Key will be hidden forever, and you will need to delete the API and start over. Please paste it into ClyptAI immediately!
+    </Warning>
+  </Step>
+  <Step title="Step 6: Verify the Connection">
+    Congratulations! You have successfully linked your Binance account to ClyptAI.
+
+    To confirm that the integration is working perfectly:
+
+    In the top right corner of the dashboard page, you will now see **Connected Exchange"** status.
+
+    Your Binance account is now securely integrated and ready for automated execution.
+
+    You can now start deploying your alpha!
+
+    <Frame>
+      ![Screenshot 2026 03 04 At 5 27 20 PM](/images/Screenshot2026-03-04at5.27.20PM.png)
+    </Frame>
+  </Step>
+</Steps>

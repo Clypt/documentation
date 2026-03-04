@@ -1,0 +1,58 @@
+---
+title: "Gate"
+---
+
+<Warning>
+  When configuring API permissions, NEVER enable "Withdraw Funds". ClyptAI only requires read access and trade execution permissions.
+</Warning>
+
+<Info>
+  Gate API Key expires automatically every 3 months.
+</Info>
+
+<Steps>
+  <Step title="Step 1: Navigate to API Management">
+    Log in to your Gate account. Hover over your profile icon in the top right corner and select **Profile**. And then click **API Key Management** in the left box.
+
+    <Frame>
+      ![Screenshot 2026 03 03 At 5 59 59 PM](/images/Screenshot2026-03-03at5.59.59PM-1.png)
+    </Frame>
+  </Step>
+  <Step title="Step 2: Create a New API Key">
+    Click the blue **Create API Key** buttion at the top right corner and select **Trading Account.**
+
+    <Frame>
+      ![Screenshot 2026 03 03 At 6 02 51 PM](/images/Screenshot2026-03-03at6.02.51PM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 3: API Settings">
+    Type the API Key Remark (whatever you want). Leave  **IP Permissions** blank for now.
+
+    Scroll down to the **Permission** section. Turn on the toggles for the following 4 times and make sure to select **Read And Write**.
+
+    - **Spot Trade**
+    - **Perpetual Futures**
+    - **Wallet**
+    - **Comission Details**
+    - **Account**
+
+    Once configured, click the blue **Submit** button at the bottom of the page.
+
+    <Frame>
+      ![Screenshot 2026 03 03 At 6 09 49 PM](/images/Screenshot2026-03-03at6.09.49PM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 4: Risk Reminder & Save Your API Keys">
+    After clicking the **Submit** button, you will go through the final security verification. Please pay close attention to this step, as your keys will only be deplayed **once** for security reasons.
+
+    1. Accept the Risk Reminder: A "Risk Reminder" pop-up will appear. Check all the boxes to acknowledge the risks, and click the **Accept** button.
+    2. Enter Password: Enter your Gate Fund Password and complete any required 2FA (e.g., Google Authenticator) to verify your identity.
+    3. Copy Your Keys: Once verified, your 'API Key' and 'Secret Key' will be generated and displayed on the screen. **Immediately** copy both keys. Paste them securely into your personal notes or directly into the ClyptAI connection screen.
+
+    <Warning>
+      For security reasons, your Secret Key will only be shown ONCE!
+
+      If you click the back button, refresh the page, or close the window without copying it, you will never be able to view it again. If you lose the Secret Key, you must delete that API key and create a new one from scratch. Please copy it immediately.
+    </Warning>
+  </Step>
+</Steps>

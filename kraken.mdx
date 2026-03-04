@@ -1,0 +1,84 @@
+---
+title: "Kraken"
+---
+
+<Warning>
+  When configuring API permissions, NEVER enable "Withdraw Funds". ClyptAI only requires read access and trade execution permissions.
+</Warning>
+
+<Steps>
+  <Step title="Step 1: Navigate to API Management">
+    Log in to your Kraken Pro account. Click on yyour **Profile Icon** in the top right corner, select **Settings**, and then click on **Connection & API**.
+
+    <Frame>
+      ![Screenshot 2026 03 04 At 2 48 17 PM](/images/Screenshot2026-03-04at2.48.17PM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 2: Configure API Permissions">
+    Click the purple **Create API Key** button to start generating a new key for ClyptAI.
+
+    In the description field, give your key recognizable name (e.g., 'ClyptAI Trading').
+
+    Scroll down to carefully configure the permissions.
+
+    1. Funds Permissions: Check the **Query** box. 
+    2. Orders and trades: Check **ALL 4** Options.
+    3. Scroll down to the **IP Address Restriction** section and turn the toggle **ON**.
+
+    <Frame>
+      ![Screenshot 2026 03 04 At 2 53 25 PM](/images/Screenshot2026-03-04at2.53.25PM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 3: Copy IP Whitelist from ClyptAI">
+    Before you can generate the key, you need the authorized IP addresses from ClyptAI.
+
+    _(Please keep your Kraken tab open!)_
+
+    1. Open a new browser tab and log in to your **ClyptAI** dashboard.
+    2. Navigate to the exchange connection page and select **Kraken** from the dropdown menu.
+
+    <Frame>
+      ![Screenshot 2026 03 04 At 3 08 22 PM](/images/Screenshot2026-03-04at3.08.22PM.png)
+    </Frame>
+    3. Locate the **IP whitelist** box and click the **Copy** buttion.
+  </Step>
+  <Step title="Step 4: Paste IP & Generate Key">
+    1. Go back to your **Kraken** tab.
+    2. **Paste** the copied IP Whitelist into the text box under the IP address restriction section.
+
+    <Warning>
+      **Security Note:** Absolutely do NOT check any boxes related to "Withdraw" or "Deposit". ClyptAI is built with strict security measures and will never ask for withdrawal permission. Protect your assets.
+    </Warning>
+    <Frame>
+      ![Screenshot 2026 03 04 At 3 15 33 PM](/images/Screenshot2026-03-04at3.15.33PM.png)
+    </Frame>
+    3. Click the purple **Generate Key** button at the bottom of the page.
+    4. A **Verify it's you** pop-up will appear. Complete the security check using your Passkey or Authenticator app.
+  </Step>
+  <Step title="Step 5: Save your Keys & Connect to ClyptAI">
+    Once verified, an "API Key created" dialog box will appear showing your newly generated keys. Please pay close attention to this step, as your keys will only be deplayed **once** for security reasons.
+
+    <Info>
+      Copy Your Keys: Once verified, your 'API Key' and 'Secret Key' will be generated and displayed on the screen. **Immediately** copy both keys. Paste them securely into your personal notes or directly into the ClyptAI connection screen.
+    </Info>
+    1. Go back to your open **ClyptAI** tab.
+    2. Click the copy icon next to the **API Key** on Kraken and paste it into the API Key field in ClyptAI.
+    3. Click the copy icon next to the **Private Key** on Kraken and paste it into the API Secret field in ClyptAI.
+    4. Click the **Connect** button in ClyptAI to finish!
+  </Step>
+  <Step title="Step 6: Verify the Connection">
+    Congratulations! You have successfully linked your Kraken account to ClyptAI.
+
+    To confirm that the integration is working perfectly:
+
+    In the top right corner of the dashboard page, you will now see **Connected Exchange"** status.
+
+    Your Kraken account is now securely integrated and ready for automated execution.
+
+    You can now start deploying your alpha!
+
+    <Frame>
+      ![Screenshot 2026 03 04 At 3 29 19 PM](/images/Screenshot2026-03-04at3.29.19PM.png)
+    </Frame>
+  </Step>
+</Steps>
