@@ -1,20 +1,87 @@
 ---
 title: "Bybit"
 sidebarTitle: "Bybit"
-description: "Guide to connect your Bybit account to ClyptAI. Currently under development."
+description: "Guide to connect your Bybit account to ClyptAI."
 ---
 
+<Warning>
+  When configuring API permissions, **never** enable "Enable Withdrawals". ClyptAI only requires read access and trade execution permissions.
+</Warning>
+
 <Info>
-  Bybit integration is under development and will be available soon. Check back for updates.
+  **Skip the API Setup with Fast Connect!**
+
+  As an official broker partner with **Bybit**, ClyptAI allows you to skip the manual API key generation entirely. Just select the exchange on your ClyptAI dashboard, click **Fast Connect**, and log in to link your account instantly!
 </Info>
 
-## Coming Soon
+<Steps>
+  <Step title="Step 1: Navigate to Bybit API Management">
+    1. Log in to your **Bybit** account.
+    1. Hover over your **Profile icon** in the top right corner and select **API** from the dropdown menu.
+    1. Click the orange **Create New Key** button located on the top right side.
+    1. A pop-up will appear. Select the **System-generated API Keys** option.
 
-The Bybit API connection guide is being prepared. Once available, this page will include:
+    <Frame>
+      ![Screenshot 2026 03 05 At 11 20 47 AM](/images/Screenshot2026-03-05at11.20.47AM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 2: Copy IP Whitelist from ClyptAI">
+    Before filling out the rest of the Bybit form, let's grab the authorized IPs.
 
-- API key generation walkthrough
-- Permission configuration for read and trade access
-- IP whitelisting setup
-- ClyptAI connection instructions
+    _(Please keep your Bybit tab open!)_
 
-For questions, contact [jaden@clypt.ai](mailto:jaden@clypt.ai).
+    1. Open a new browser tab and log in to your **ClyptAI** dashboard.
+    2. Navigate to the exchange connection page and select **Bybit** from the dropdown menu.
+    3. Locate the **IP Whitelist** box and click the **Copy** button.
+
+    <Frame>
+      ![Screenshot 2026 03 05 At 11 22 42 AM](/images/Screenshot2026-03-05at11.22.42AM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 3: Paste IP & Configure Settings">
+    1. Go back to your **Bybit** tab.
+    2. Ensure **API Transaction** is selected under "API Key Usage".
+    3. Enter a name for your API key in the **Name for the API key** box (e.g., `ClyptAI`).
+    4. Under "API Key Permissions", strictly select **Read-Write**.
+    5. In the IP restriction section, select **"Only IPs with permissions granted are allowed to access the OpenAPI"** and **Paste** the IP Whitelist you copied from ClyptAI.
+
+    <Frame>
+      ![Screenshot 2026 03 05 At 11 24 56 AM](/images/Screenshot2026-03-05at11.24.56AM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 4: Select Trading Permissions">
+    Now, scroll down to the permissions checklist. Under the **Unified Trading** section, check **ONLY** the following boxes:
+
+    ✅ Under **Contract**: Check `Orders` and `Positions`.
+
+    ✅ Under **SPOT**: Check `Trade`.
+
+    <Warning>
+      **Security Note:** Scroll down to the **Assets** section and make sure absolutely NOTHING is checked (such as Account Transfer, Withdrawal, etc.). ClyptAI only requires trade execution access. Your funds remain securely in your Bybit wallet.
+    </Warning>
+    Click the Orange **Submit** button at the bottom. Complete your security  verification (2FA/Email code) to generate the keys.
+  </Step>
+  <Step title="Step 5: Save Your Keys & Connect to ClyptAI">
+    <Warning>
+      **CRITICAL:** Bybit will only show your **API Secret** ONCE. If you click "Understood" and close the pop-up, the secret key will be hidden forever. Please paste it into ClyptAI immediately before closing the window!
+    </Warning>
+    Bybit will now display a pop-up with your newly generated keys.
+
+    1. Go back to your open **ClyptAI** tab.
+    2. Copy the `API Key`from Bybit and paste it into the API Key field in ClyptAI.
+    3. Copy the `API Secret` from Bybit and paste it into the `API Secret` field in ClyptAI.
+    4. Click the **Connect** button to finish!
+  </Step>
+  <Step title="Step 6: Verify the Connection">
+    Congratulations! You have successfully linked your Bybit account.
+
+    To confirm that the integration is working perfectly:
+
+    1. In the "Connect to your exchange accounts" page, you will now see a green **Connected** status next to Bybit.
+    2. Head over to your main ClyptAI **Dashboard**. Under the **Connected Exchanges** section, you should clearly see the Bybit logo displayed.
+
+    <Frame>
+      ![Screenshot 2026 03 05 At 11 32 48 AM](/images/Screenshot2026-03-05at11.32.48AM.png)
+    </Frame>
+  </Step>
+</Steps>

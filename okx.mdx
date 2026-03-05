@@ -1,0 +1,73 @@
+---
+title: "OKX"
+---
+
+<Info>
+  OKX requires a unique security feature when creating an API key: a **Passphrase**. You must create and remember this password, as you will need to enter it into ClyptAI along with your API Key and Secret.
+</Info>
+
+<Warning>
+  When configuring API permissions, **never** enable "Enable Withdrawals". ClyptAI only requires read access and trade execution permissions.
+</Warning>
+
+Here is how to securely generate your keys and connect OKX to ClyptAI.
+
+<Steps>
+  <Step title="Step 1: Navigate to OKX API Management">
+    1. Log in to your **OKX** account.
+    2. Hover over your **Profile icon** in the top right corner and select **API** from the dropdown menu.
+    3. Click the green **\+ Create API key** button.
+
+    <Frame>
+      ![Screenshot 2026 03 05 At 11 55 00 AM](/images/Screenshot2026-03-05at11.55.00AM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 2: Copy IP Whitelist from ClyptAI">
+    Before configuring the rest of the OKX settings, let's grab the authorized IPs.
+
+    _(Please keep your OKX tab open!)_
+
+    1. Open a new browser tab and log in to your **ClyptAI** dashboard.
+    2. Navigate to the exchange connection page and select **OKX** from the dropdown menu.
+    3. Locate the **IP Whitelist (comma-separated)** box and click the **Copy** button.
+
+    <Frame>
+      ![Screenshot 2026 03 05 At 11 57 45 AM](/images/Screenshot2026-03-05at11.57.45AM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 3: Set Passphrase, Paste IP & Configure Permissions">
+    Now let's finish the API setup on OKX securely:
+
+    1. Go back to your **OKX** tab.
+    2. Enter an API key name (e.g., `ClyptAI`).
+    3. Under "Used for", select the **API trading** option.
+    4. Under the **IP address allowlist** section, **Paste** the IP Whitelist you copied from ClyptAI.
+    5. Under the **Permissions** section, ensure **Read** is checked, and select **Trade**.
+    6. **Passphrase (IMPORTANT):** Create a strong Passphrase for this API key. **Write this down immediately!** <u>ClyptAI will ask for this exact Passphrase in the final step.</u>
+    7. Click the **Confirm** (or Submit) button at the bottom. Complete your security verification to generate the keys. Once created successfully, proceed to the API key info screen.
+
+    <Warning>
+      **Security Note:** Absolutely do NOT check any withdrawal permissions. ClyptAI only requires trade execution access. Your funds remain safely in your OKX wallet.
+    </Warning>
+    <Frame>
+      ![Screenshot 2026 03 05 At 12 00 09 PM](/images/Screenshot2026-03-05at12.00.09PM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 4: Save Your Keys & Connect to ClyptAI">
+    OKX will now display a screen with your newly generated API Key and Secret Key.
+
+    1. Go back to your open **ClyptAI** tab.
+    2. Copy the `API key` from OKX and paste it into the API Key field in ClyptAI.
+    3. Copy the `Secret key` from OKX and paste it into the API Secret field in ClyptAI.
+    4. **Passphrase:** Type the exact **Passphrase** you created in Step 3 into the Passphrase field in ClyptAI.
+    5. Click the **Connect** button to finish!
+  </Step>
+  <Step title="Step 5: Verify the Connection">
+    Congratulations! You have successfully linked your OKX account.
+
+    To confirm that the integration is working perfectly:
+
+    1. In the "Connect to your exchange accounts" page, you will now see a green **Connected** status next to OKX.
+    2. Head over to your main ClyptAI **Dashboard**. Under the **Connected Exchanges** section, you should clearly see the OKX logo displayed.
+  </Step>
+</Steps>

@@ -5,15 +5,87 @@ description: "Guide to connect your AsterDex account to ClyptAI. Currently under
 ---
 
 <Info>
-  AsterDex integration is under development and will be available soon. Check back for updates.
+  AsterDEX is a Decentralized Exchange (DEX), meaning you maintain 100% custody of your funds in your personal Web3 wallet. However, unlike traditional DEXs, AsterDEX utilizes a highly efficient, CEX-like API key system specifically designed for algorithmic trading. This allows ClyptAI to execute trades with lightning speed and precision while your funds remain safely in your own wallet. Here is how you can securely generate your API keys and connect AsterDEX to ClyptAI.
 </Info>
 
-## Coming Soon
+<Steps>
+  <Step title="Step 1: Connect Wallet to AsterDEX">
+    1. Open a new browser tab and navigate to the **AsterDEX** website.
+    2. In the top right corner, click the yellow **Connect wallet** button.
+    3. Select your preferred Web3 wallet (e.g., MetaMask, OKX Wallet) and sign the message in your wallet to log in. Or you can connect the wallet through signing in with your email address.
+  </Step>
+  <Step title="Step 2: Navigate to API Management & Create Key">
+    1. Once your wallet is connected, click on the **More** menu at the top of the page and select **API Management**. 
 
-The AsterDex connection guide is being prepared. Once available, this page will include:
+    2. Click the beige **Create API** button on the right side. 
 
-- DEX wallet connection setup
-- Permission configuration
-- ClyptAI integration instructions
+    3. A pop-up will appear. Enter a Label (e.g., `ClyptAI`) and click the **Create API** button to proceed.
 
-For questions, contact [jaden@clypt.ai](mailto:jaden@clypt.ai).
+    <Frame>
+      ![Screenshot 2026 03 05 At 11 02 22 AM](/images/Screenshot2026-03-05at11.02.22AM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 3: Copy IP Whitelist from ClyptAI">
+    After creating the API, the **Edit API** window will pop up. Before configuring it, you need the authorized IP addresses from ClyptAI. _(Please keep this AsterDEX tab open!)_
+
+    <Frame>
+      ![Screenshot 2026 03 05 At 11 05 59 AM](/images/Screenshot2026-03-05at11.05.59AM.png)
+    </Frame>
+     
+
+    1. Open a new browser tab and log in to your **ClyptAI** dashboard. 
+
+    2. Navigate to the exchange connection page and select **AsterDEX** from the dropdown menu. 
+
+    3. Locate the **IP Whitelist** box and click the **Copy** button.
+
+    <Frame>
+      ![Screenshot 2026 03 05 At 11 04 22 AM](/images/Screenshot2026-03-05at11.04.22AM.png)
+    </Frame>
+  </Step>
+  <Step title="Step 4: Configure Permissions & Paste IP">
+    1. Go back to your **AsterDEX** tab (where the Edit API window is open). 
+
+    2. Under the **IP restrictions** section, select **"Restrict to trusted IPs only (recommended)"**. 
+
+    3. **Paste** the IP Whitelist you just copied, and click the `Confirm`text next to the input box. _(You will see the IP addresses successfully added as individual blocks below the input field)_
+
+    <Frame>
+      ![Screenshot 2026 03 05 At 11 09 12 AM](/images/Screenshot2026-03-05at11.09.12AM.png)
+    </Frame>
+    4. Now, under **API restrictions**, activate the necessary trading permissions. Check **ONLY** the following three boxes: 
+
+    ✅ **Enable Reading** (Checked by default) 
+
+    ✅ **Enable Futures** 
+
+    ✅ **Enable Spot Trading** 
+
+    <Warning>
+      **Security Note:** Absolutely do NOT check **"Enable Withdrawals"**. ClyptAI only requires trade execution access. Your funds remain safely in your Web3 wallet.
+    </Warning>
+     
+  </Step>
+  <Step title="Step 5: Save Your Keys & Connect to ClyptAI">
+    Before you click Save, you must copy your keys to ClyptAI. 
+
+    1. In the AsterDEX Edit API window, click the copy icon next to the `API key`and paste it into the API Key field in ClyptAI. 
+
+    2. Click the copy icon next to the `API secret key`and paste it into the `API Secret` field in ClyptAI. 
+
+    3. Click the beige **Save** button at the bottom of the AsterDEX window. 
+
+    4. Finally, click the **Connect** button in ClyptAI to finish!
+  </Step>
+  <Step title="Step 6: Verify the Connection">
+    Congratulations! You have successfully linked your AsterDEX account. 
+
+    To confirm that the integration is working perfectly: 
+
+    1. In the "Connect to your exchange accounts" page, you will now see a green **Connected** status next to AsterDEX. 
+
+    2. Head over to your main ClyptAI **Dashboard**. Under the **Connected Exchanges** section, you should clearly see the AsterDEX logo displayed. 
+
+    Your Web3 wallet is now securely integrated. You can now start deploying your alpha directly on-chain!
+  </Step>
+</Steps>
