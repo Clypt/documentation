@@ -1,0 +1,58 @@
+---
+title: "Gate"
+sidebarTitle: "Gate"
+description: "Step-by-step guide to connect your Gate exchange account to ClyptAI with secure API key configuration."
+---
+
+<Warning>
+  When configuring API permissions, **never** enable "Withdraw Funds". ClyptAI only requires read access and trade execution permissions.
+</Warning>
+
+<Info>
+  Gate API keys expire automatically every 3 months. You will need to regenerate and reconnect when they expire.
+</Info>
+
+<Steps>
+  <Step title="Navigate to API Management">
+    Log in to your Gate account. Hover over your profile icon in the top right corner and select **Profile**. Then click **API Key Management** in the left sidebar.
+
+    <Frame>
+      ![Gate API Management](/images/Screenshot2026-03-03at5.59.59PM-1.png)
+    </Frame>
+  </Step>
+  <Step title="Create a New API Key">
+    Click the blue **Create API Key** button at the top right corner and select **Trading Account**.
+
+    <Frame>
+      ![Create API Key](/images/Screenshot2026-03-03at6.02.51PM.png)
+    </Frame>
+  </Step>
+  <Step title="Configure API Settings">
+    Enter a name for your API key (e.g., "ClyptAI"). Leave **IP Permissions** blank for now.
+
+    Scroll down to the **Permission** section. Enable the following permissions and select **Read And Write** for each:
+
+    - **Spot Trade**
+    - **Perpetual Futures**
+    - **Wallet**
+    - **Commission Details**
+    - **Account**
+
+    Once configured, click the blue **Submit** button at the bottom of the page.
+
+    <Frame>
+      ![API Permissions](/images/Screenshot2026-03-03at6.09.49PM.png)
+    </Frame>
+  </Step>
+  <Step title="Save Your API Keys">
+    After clicking Submit, you will go through a final security verification. Your keys will only be displayed **once**.
+
+    1. A "Risk Reminder" pop-up will appear. Check all the boxes to acknowledge the risks and click **Accept**.
+    2. Enter your Gate Fund Password and complete any required 2FA verification.
+    3. Your **API Key** and **Secret Key** will be generated. **Immediately** copy both keys and paste them into the ClyptAI connection screen.
+
+    <Warning>
+      Your Secret Key will only be shown **once**. If you close the window, refresh the page, or navigate away without copying it, the key is lost permanently. You would need to delete the API key and create a new one from scratch.
+    </Warning>
+  </Step>
+</Steps>

@@ -1,88 +1,84 @@
 ---
 title: "Coinbase"
+sidebarTitle: "Coinbase"
+description: "Step-by-step guide to connect your Coinbase Advanced account to ClyptAI with IP-restricted API keys."
 ---
 
 <Warning>
-  When configuring API permissions, NEVER enable "Withdraw Funds". ClyptAI only requires read access and trade execution permissions.
+  When configuring API permissions, **never** enable "Transfer" or withdrawal permissions. ClyptAI only requires read access and trade execution.
 </Warning>
 
 <Steps>
-  <Step title="Step 1: Navigate to API Management">
-    Log in to your Coinbase account. Click on yyour **Profile Icon** in the top right corner, select **Settings**.
+  <Step title="Navigate to API Settings">
+    Log in to your Coinbase account. Click on your **Profile Icon** in the top right corner and select **Settings**.
 
-    On the left Sidebar menu, scroll down and click on **API.**
+    On the left sidebar menu, scroll down and click **API**.
 
-    ![Screenshot 2026 03 04 At 4 01 23 PM](/images/Screenshot2026-03-04at4.01.23PM.png)
+    ![Coinbase Settings](/images/Screenshot2026-03-04at4.01.23PM.png)
   </Step>
-  <Step title="Step 2: Create API Key">
-    Click the blue **Create API Key** button to start generating a new key for ClyptAI.
+  <Step title="Create API Key">
+    Click the blue **Create API Key** button to start generating a new key for ClyptAI.
 
-    ![Screenshot 2026 03 04 At 4 03 18 PM](/images/Screenshot2026-03-04at4.03.18PM.png)
+    ![Create API Key](/images/Screenshot2026-03-04at4.03.18PM.png)
   </Step>
-  <Step title="Step 3: Configure Basic Settings & Permissions.">
-    In the "Create API Key" pop-up window, configure the following settings:
+  <Step title="Configure Permissions">
+    In the "Create API Key" pop-up window, configure the following:
 
-    1. API Key Nickname: Give your key a recognizable name (e.g., 'ClyptAI').
-    2. Portfolio: Leave it as 'Primary'.
-    3. Permissions: Check the first two boxes:
-       - View (Read-only)
-       - Trade (Execute trades on your behalf)
+    1. **API Key Nickname** - Give your key a recognizable name (e.g., "ClyptAI").
+    2. **Portfolio** - Leave it as "Primary".
+    3. **Permissions** - Check the first two boxes:
+       - **View** (Read-only)
+       - **Trade** (Execute trades on your behalf)
 
-    _(Wait! Do not click the create button yet. You need to restrict the IP first.)_
+    Do not click the create button yet. You need to restrict the IP first.
 
-    ![Screenshot 2026 03 04 At 4 08 09 PM](/images/Screenshot2026-03-04at4.08.09PM.png)
+    ![Permissions](/images/Screenshot2026-03-04at4.08.09PM.png)
   </Step>
-  <Step title="Step 4: Copy IP Whitelist from ClyptAI">
-    Before finalizing the key, you must retrieve the authorized IP addresses from ClyptAI.
+  <Step title="Copy IP Whitelist from ClyptAI">
+    Before finalizing the key, retrieve the authorized IP addresses from ClyptAI.
 
-    1. Open a new browser tab and log in to your **ClyptAI** dashboard.
-    2. Navigate to the exchange connection page and select **Coinbase** from the dropdown menu.
-    3. Locate the **IP whitelist** box and click the **Copy** button.
+    1. Open a new browser tab and log in to your **ClyptAI** dashboard.
+    2. Navigate to the exchange connection page and select **Coinbase** from the dropdown menu.
+    3. Locate the **IP whitelist** box and click the **Copy** button.
 
     <Frame>
-      ![Screenshot 2026 03 04 At 4 11 13 PM](/images/Screenshot2026-03-04at4.11.13PM.png)
+      ![ClyptAI IP Whitelist](/images/Screenshot2026-03-04at4.11.13PM.png)
     </Frame>
   </Step>
-  <Step title="Step 5: Paste IP & Generate Key">
+  <Step title="Paste IP and Generate Key">
     1. Go back to your **Coinbase** tab.
-    2. **Paste** the copied IP whitelist into the **IP allowlist** text box.
+    2. Paste the copied IP whitelist into the **IP allowlist** text box.
     3. Click the blue **Create & Download** button at the bottom. Complete any 2FA security checks if prompted.
 
     <Warning>
-      **Security Note:** Absolutely do NOT check the **"Transfer (initiate transfer of funds)"** permission. ClyptAI is built with strict security measures and will never ask for withdrawal permissions. Protect your assets.
+      Do **not** check the "Transfer (initiate transfer of funds)" permission. ClyptAI will never request withdrawal access.
     </Warning>
+
     <Frame>
-      ![Screenshot 2026 03 04 At 4 15 29 PM](/images/Screenshot2026-03-04at4.15.29PM.png)
+      ![IP Allowlist](/images/Screenshot2026-03-04at4.15.29PM.png)
     </Frame>
   </Step>
-  <Step title="Step 6: Save your Keys & Connect to ClyptAI">
-    Coinbase will generate your API credentials.
-
-    Once generated, an "API Key created" dialog box will appear showing your newly generated keys. Please pay close attention to this step, as your keys will only be deplayed **once** for security reasons.
+  <Step title="Save Keys and Connect to ClyptAI">
+    Coinbase will generate your API credentials. The keys will only be displayed **once**.
 
     <Info>
-      Copy Your Keys: Once verified, your 'API Key' and 'Secret Key' will be generated and displayed on the screen. **Immediately** copy both keys. Paste them securely into your personal notes or directly into the ClyptAI connection screen.
+      **Immediately** copy your API Key and Secret Key. Paste them securely into your personal notes or directly into the ClyptAI connection screen.
     </Info>
-    1. Go back to your open **ClyptAI** tab.
-    2. Copy the **API Key name** from Coinbase and paste it into the **API Key** field in ClyptAI.
-    3. Copy the **Private Key** from Coinbase and paste it into the **API Secret** field in ClyptAI
-    4. Click the **Connect** button to finish!
+
+    1. Go back to your open **ClyptAI** tab.
+    2. Copy the **API Key name** from Coinbase and paste it into the **API Key** field in ClyptAI.
+    3. Copy the **Private Key** from Coinbase and paste it into the **API Secret** field in ClyptAI.
+    4. Click the **Connect** button to finish.
   </Step>
-  <Step title="Step 7: Verify the Connection">
-    Congratulations! You have successfully linked your Coinbase account to ClyptAI.
+  <Step title="Verify the Connection">
+    To confirm the integration is working:
 
-    To confirm that the integration is working perfectly:
+    In the top right corner of the dashboard page, you will now see the **Connected Exchange** status.
 
-    In the top right corner of the dashboard page, you will now see **Connected Exchange"** status.
-
-    Your Coinbase account is now securely integrated and ready for automated execution.
-
-    You can now start deploying your alpha!
-
-    You can now start deploying your alpha!
+    Your Coinbase account is now securely integrated and ready for automated execution. You can now start deploying your alpha.
 
     <Frame>
-      ![Screenshot 2026 03 04 At 4 38 29 PM](/images/Screenshot2026-03-04at4.38.29PM.png)
+      ![Connected](/images/Screenshot2026-03-04at4.38.29PM.png)
     </Frame>
   </Step>
 </Steps>

@@ -5,3 +5,8 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Agent instructions
+AGENTS.md
+
+.omc/

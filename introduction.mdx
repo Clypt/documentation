@@ -1,0 +1,57 @@
+---
+title: "API Connection Guide"
+sidebarTitle: "Introduction"
+description: "Connect your exchange accounts to ClyptAI securely. Step-by-step setup for all supported exchanges."
+---
+
+## Before You Begin
+
+ClyptAI connects to your exchange via API keys. This allows the platform to read your portfolio and execute trades on your behalf, without ever having access to withdraw your funds.
+
+<Warning>
+  **Never enable withdrawal permissions.** ClyptAI only requires read access and trade execution. If any setup guide asks you to enable withdrawals, stop and contact support immediately.
+</Warning>
+
+## Supported Exchanges
+
+Select your exchange below to follow the setup guide.
+
+<CardGroup cols={3}>
+  <Card href="/coinbase">
+    <img src="/images/exchanges/coinbase.png" width="40" style={{borderRadius: "8px"}} />
+    **Coinbase**
+  </Card>
+  <Card href="/binance">
+    <img src="/images/exchanges/binance.png" width="40" style={{borderRadius: "8px"}} />
+    **Binance**
+  </Card>
+  <Card href="/kraken">
+    <img src="/images/exchanges/kraken.png" width="40" style={{borderRadius: "8px"}} />
+    **Kraken**
+  </Card>
+  <Card href="/gate">
+    <img src="/images/exchanges/gate.png" width="40" style={{borderRadius: "8px"}} />
+    **Gate**
+  </Card>
+  <Card href="/bybit">
+    <img src="/images/exchanges/bybit.png" width="40" style={{borderRadius: "8px"}} />
+    **Bybit**
+  </Card>
+  <Card href="/hyperliquid">
+    <img src="/images/exchanges/hyperliquid.png" width="40" style={{borderRadius: "8px"}} />
+    **Hyperliquid**
+  </Card>
+</CardGroup>
+
+## Security Principles
+
+All ClyptAI integrations follow these security standards:
+
+- **IP Whitelisting** - API keys are restricted to ClyptAI server IPs only
+- **No Withdrawal Access** - Keys are configured with trade and read permissions only
+- **Encrypted Storage** - All API credentials are encrypted at rest with AES-256
+- **Minimal Permissions** - Only the permissions required for trading are requested
+
+## Need Help?
+
+If you run into any issues during setup, reach out to [jaden@clypt.ai](mailto:jaden@clypt.ai).
